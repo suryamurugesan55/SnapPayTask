@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ReferEarnActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl0"
+        android:background="@drawable/ic_refer_top"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="290dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgTopGroup"
+            android:src="@drawable/ic_refer_earn_top_group"
+            android:layout_margin="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="160dp"
+            android:layout_height="160dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRefer"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBaseline_toTopOf="@id/imgTopGroup"
+            android:text="Refer your friends\n&amp; Earn ₹100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll0"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_white_round_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/imgTopGroup"
+            app:layout_constraintTop_toBottomOf="@+id/textRefer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:src="@drawable/ic_cash"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="50 in Wallet Cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_white_round_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/imgTopGroup"
+            app:layout_constraintTop_toBottomOf="@+id/ll0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:src="@drawable/ic_coin"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="50 in Game Points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toBottomOf="@id/cl0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:text="Track My Referrals:"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:ignore="HardcodedText" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textColor="#5A5A5A"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="5dp"
+                            android:textStyle="normal"
+                            android:textSize="14sp"
+                            android:text="1 Friend Joined &#8226; 0 Pending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_marginEnd="5dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_left_actionable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="#304FFE"
+                            android:text="How it Works"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:ignore="HardcodedText" />
+
+                        <View
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:background="#33304FFE"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/ic_step1_frame"
+                            android:layout_gravity="center"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_weight="1"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:textStyle="normal"
+                                android:textSize="12sp"
+                                android:textColor="#304FFE"
+                                android:text="Step 1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_marginTop="5dp"
+                                android:textStyle="normal"
+                                android:textSize="12sp"
+                                android:text="@string/step_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/ic_step2_frame"
+                            android:layout_gravity="center"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_weight="1"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:textStyle="normal"
+                                android:textSize="12sp"
+                                android:textColor="#304FFE"
+                                android:text="Step 2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_marginTop="5dp"
+                                android:textStyle="normal"
+                                android:textSize="12sp"
+                                android:text="@string/step_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/ic_step3_frame"
+                            android:layout_gravity="center"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_weight="1"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:textStyle="normal"
+                                android:textSize="12sp"
+                                android:textColor="#304FFE"
+                                android:text="Step 3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_marginTop="5dp"
+                                android:textStyle="normal"
+                                android:textSize="12sp"
+                                android:text="@string/step_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:text="Refer &amp; Earn Now"
+                        android:textSize="16sp"
+                        android:background="@drawable/ic_refer_screen_btn_bg"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:text="Terms and Conditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="#F4F4F4"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/ic_checkcircle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_marginStart="5dp"
+                            android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:text="Comes with 1 year validity. The gift card can be used multiple times"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/ic_checkcircle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_marginStart="5dp"
+                            android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:text="Users can add multiple gift cards to Zomato."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/ic_checkcircle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_marginStart="5dp"
+                            android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:text="Enter the 16 digit card number and 6 digit pin and tap on claim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <View
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="#33304FFE"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="#33304FFE"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

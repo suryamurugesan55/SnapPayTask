@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SnapPay Task</string>
+    <string name="step_1">Share your <b>Invite link</b> with friends and family</string>
+    <string name="step_2">Ask them to <b>Download the app</b> and initiate a first transaction on SnapPay</string>
+    <string name="step_3">Earn <b>50 Game points</b> credited instantly, With no conditions, get <b>₹50 Real Money,</b> when your friend makes his first transaction.</string>
+    <string name="pending"><font color="#FDD835">&#8226;</font> Pending (19)</string>
+    <string name="complete"><font color="#43A048">&#8226;</font> Completed (2)</string>
+</resources>
