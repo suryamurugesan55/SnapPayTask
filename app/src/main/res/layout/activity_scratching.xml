@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/ic_scratching_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ScratchingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/beforeScratchTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="You’ve won a scratch card for\nmaking payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="Scratch Now"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:visibility="gone"
+                android:id="@+id/afterScratchTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="Congratulations 🎉"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_scratch_center_round"
+                    tools:layout_editor_absoluteX="-151dp"
+                    tools:layout_editor_absoluteY="51dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:rotation="20"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:text="₹32"
+                        android:textStyle="bold"
+                        android:textSize="48sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                    <com.anupkumarpanwar.scratchview.ScratchView
+                        android:id="@+id/scratch_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:overlay_image="@drawable/ic_scratch_overlay_img"
+                        app:overlay_width="230dp"
+                        app:overlay_height="230dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_marginTop="40dp"
+                android:id="@+id/beforeScratchBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="Expiring in 10 days"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:backgroundTint="#1A304FFE"
+                    android:textColor="#304FFE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_text_bg_frame"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:visibility="gone"
+                android:layout_marginTop="40dp"
+                android:id="@+id/afterScratchBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="Invite your friends on Snappay and earn upto ₹100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn0"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:text="Share &amp; Win Together"
+                    android:textSize="16sp"
+                    android:background="@drawable/ic_refer_screen_btn_bg"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

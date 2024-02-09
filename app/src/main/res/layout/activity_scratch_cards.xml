@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ScratchCardsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl0"
+        android:background="@drawable/ic_scratch_cards_top_group"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="290dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgTopGroup"
+            android:src="@drawable/ic_scratch_cards_top_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ll1"
+            android:layout_width="160dp"
+            android:layout_height="160dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRefer"
+            android:textStyle="normal"
+            android:textSize="24sp"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textRefer1"
+            android:text="Total Rewards₹6,000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRefer1"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="#304FFE"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ll0"
+            android:layout_marginBottom="20dp"
+            android:text="₹6,000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll0"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_white_round_bg"
+            android:layout_margin="20dp"
+            app:layout_constraintRight_toLeftOf="@+id/ll1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:src="@drawable/ic_cash_blink"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:lineSpacingExtra="5dp"
+                android:text="₹3,000\nWallet Cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_white_round_bg"
+            android:layout_margin="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/ll0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:src="@drawable/ic_coin_blink"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:lineSpacingExtra="5dp"
+                android:text="₹3,000\nGame Points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scratch Cards"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <GridView
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:horizontalSpacing="6dp"
+        android:numColumns="2"
+        android:verticalSpacing="6dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
